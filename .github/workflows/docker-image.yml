@@ -11,12 +11,6 @@ jobs:
     environment: DOCKER
 
     steps:
-      - name: Check Secrets
-        run: |
-          echo "Username length: ${#DOCKER_USERNAME}"
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-
       - name: Checkout
         uses: actions/checkout@v4
 
